@@ -28,7 +28,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: rgb(148, 186, 244);
+  background-color: rgb(251, 252, 253);
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 20px;
@@ -137,4 +137,5 @@ button{
   cursor: pointer;
   border-radius: 5px;
   background-color: rgb(0, 96, 205);
+  color: white;
 }
