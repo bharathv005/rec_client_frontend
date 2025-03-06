@@ -11,30 +11,16 @@ export const Navbar = () => {
     window.localStorage.clear();
     navigate("/auth");
   };
-
   return (
-    <nav className="bg-blue-600 text-white p-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="flex space-x-6">
-          <Link className="hover:text-gray-200 transition" to="/">Home</Link>
-          <Link className="hover:text-gray-200 transition" to="/create-recipe">Create Recipe</Link>
-          <Link className="hover:text-gray-200 transition" to="/saved-recipes">Saved Recipes</Link>
-        </div>
-        <div>
-          {!cookies.access_token ? (
-            <Link className="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200 transition" to="/auth">
-              Login/Register
-            </Link>
-          ) : (
-            <button
-              onClick={logout}
-              className="bg-red-500 px-4 py-2 rounded-md hover:bg-red-600 transition"
-            >
-              Logout
-            </button>
-          )}
-        </div>
-      </div>
-    </nav>
+    <div className="navbar">
+      <Link to="/">Home</Link>
+      <Link to="/create-recipe">Create Recipe</Link>
+      <Link to="/saved-recipes">Saved Recipes</Link>
+      {!cookies.access_token ? (
+        <Link to="/auth">Login/Register</Link>
+      ) : (
+        <button onClick={logout}> Logout </button>
+      )}
+    </div>
   );
 };
