@@ -22,28 +22,19 @@ body {
   height: 80px;
   background: linear-gradient(135deg, #007bff, #0056b3);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0 30px;
   color: white;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
 }
 
 .navbar a {
   color: white;
   text-decoration: none;
-  margin: 0 15px;
-  font-size: 18px;
+  margin: 15px;
   transition: all 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  gap: 5px;
 }
 
 .navbar a:hover {
@@ -57,27 +48,27 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #eaeff2;
+  background: #f2f2f2;
 }
 
 .auth-container {
-  padding: 30px;
+  padding: 25px;
   background: white;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   width: 400px;
   text-align: center;
 }
 
 .auth-container h2 {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* Form Styles */
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 label {
@@ -90,7 +81,7 @@ input {
   padding: 12px;
   font-size: 16px;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 6px;
   transition: 0.3s;
 }
 
@@ -102,24 +93,18 @@ input:focus {
 
 /* Button Styling */
 button {
-  padding: 12px 18px;
+  padding: 10px 15px;
   font-size: 16px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   background: #007bff;
   color: white;
   cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
 button:hover {
   background: #0056b3;
-  transform: scale(1.05);
-}
-
-button:active {
-  transform: scale(0.98);
 }
 
 /* Recipe Creation Section */
@@ -127,12 +112,11 @@ button:active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding: 25px;
   background: white;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  width: 380px;
-  margin-top: 100px;
+  width: 350px;
 }
 
 .create-recipe form {
@@ -144,7 +128,7 @@ ul {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
 }
 
@@ -152,39 +136,26 @@ li {
   background: #fff;
   border: 1px solid #ddd;
   padding: 12px;
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-}
-
-li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Images */
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 0;
-  }
-
+@media (max-width: 600px) {
   .auth-container,
   .create-recipe {
     width: 90%;
   }
 
-  .navbar a {
-    font-size: 16px;
-    margin: 10px 0;
+  .navbar {
+    font-size: 18px;
   }
 
   ul {
