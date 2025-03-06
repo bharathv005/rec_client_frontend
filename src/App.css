@@ -1,99 +1,40 @@
-/* General Styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #f4f7f6;
-  color: #333;
-}
-
-/* Centering App */
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/* Navbar Styling */
-.navbar {
-  width: 100%;
-  height: 70px;
-  background: linear-gradient(135deg, #007bff, #0056b3);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+body {
+  margin: 0;
+  padding: 0;
+  background-color:rgb(230, 240, 255);
+  
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin: 0 12px;
-  font-size: 17px;
-  transition: all 0.3s ease-in-out;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 8px 12px;
-  border-radius: 5px;
-}
-
-.navbar a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
-}
-
-/* Button in Navbar */
-.navbar button {
-  background: #ff4d4d;
-  border: none;
-  padding: 10px 16px;
-  font-size: 16px;
-  color: white;
-  font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.navbar button:hover {
-  background: #cc0000;
-  transform: scale(1.05);
-}
-
-/* Authentication Container */
 .auth {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #eaeff2;
+  background-color: #f2f2f2;
 }
 
 .auth-container {
-  padding: 30px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  width: 380px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: 400px;
 }
 
-.auth-container h2 {
-  margin-bottom: 20px;
-}
-
-/* Form Styles */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -101,113 +42,99 @@ body {
 }
 
 label {
-  font-weight: 600;
+  font-weight: bold;
   margin-bottom: 5px;
-  color: #444;
 }
 
 input {
-  padding: 12px;
+  padding: 10px;
   font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  transition: 0.3s;
+  border-radius: 5px;
 }
 
-input:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
-}
-
-/* Button Styling */
-button {
-  padding: 12px 18px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  background: #007bff;
+.navbar {
+  margin: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(62, 118, 228);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s ease-in-out;
+  text-decoration: none;
 }
 
-button:hover {
-  background: #0056b3;
-  transform: scale(1.05);
+a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 25px;
+}
+a:hover{
+  scale: 1.1;
+  border-bottom: 2px dotted red;
 }
 
-button:active {
-  transform: scale(0.98);
-}
-
-/* Recipe Creation Section */
 .create-recipe {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 30px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  width: 380px;
-  margin-top: 100px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: 300px;
 }
-
 .create-recipe form {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
-/* Grid Layout for Lists */
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
 li {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 12px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+h2 {
+  margin-top: 0;
 }
 
-/* Images */
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 0;
-  }
+img {
+  width: 400px;
+}
 
-  .auth-container,
-  .create-recipe {
-    width: 90%;
-  }
+p {
+  max-width: 400px;
+  font-size: 12px;
+  display: -webkit-box;
+  line-clamp: 5;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 6em
+}
 
-  .navbar a {
-    font-size: 16px;
-    margin: 10px 0;
-  }
-
-  ul {
-    grid-template-columns: 1fr;
-  }
+button{
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(0, 96, 205);
 }
